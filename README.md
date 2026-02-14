@@ -23,12 +23,12 @@ Simply place `enn.py` in the same directory as your program and run it using `en
 
 ### Commands
 #### Create a variable
-Q is the name of the variable.
+`q` is the name of the variable.
 ```
 q=;
 ```
 #### Use a NAND gate
-Variable Q is set to W NAND E.
+Variable `q` is set to `w` NAND `e`.
 ```
 q=w,e;
 ```
@@ -37,7 +37,7 @@ You can also use direct values.
 q=w,0;
 ```
 #### Output a value
-Q is outputed to the console. Variable outputs are inline.
+`q` is outputed to the console. Variable outputs are inline.
 ```
 >q;
 ```
