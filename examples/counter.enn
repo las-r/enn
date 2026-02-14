@@ -1,3 +1,6 @@
+/ 3-bit counter written in Enn /
+/ Made by las-r on GitHub /
+
 / Output MSB to LSB /
 >q2;
 >q1;
