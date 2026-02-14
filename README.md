@@ -8,7 +8,7 @@ Every instruction in Enn does 1 of 2 things:
 
 The only computation given to you is the ability to use NAND.
 
-**IMPORTANT NOTE:** Every program loops.
+**IMPORTANT NOTE:** Every program loops. To end a program, you must forcequit it.
 
 ## Usage
 **REQUIREMENTS:** Python v3.x
