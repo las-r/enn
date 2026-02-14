@@ -1,2 +1,49 @@
 # Enn: Executable NAND Network
 A logic-oriented esolang.
+
+## How Enn works
+Every instruction in Enn does 1 of 2 things:
+- Set a variable
+- Output that variable
+
+The only computation given to you is the ability to use NAND.
+
+**IMPORTANT NOTE:** Every program loops.
+
+## Usage
+**REQUIREMENTS:** Python v3.x
+
+Simply place `enn.py` in the same directory as your program and run it using `enn.py PROGRAM[.enn] [CYCLE WAIT TIME]`.
+
+## Syntax
+### Basic Rules
+- Every instruction should be ended with ";".
+- Spaces, lines, and indentation does not matter.
+- Comments are padded with "/".
+
+### Commands
+#### Create a variable
+Q is the name of the variable.
+```
+q=;
+```
+#### Use a NAND gate
+Variable Q is set to W NAND E.
+```
+q=w,e;
+```
+You can also use direct values.
+```
+q=w,0;
+```
+#### Output a value
+Q is outputed to the console. Variable outputs are inline.
+```
+>q;
+```
+An output symbol with no variable is a newline.
+```
+>;
+```
+
+That's it, really.
