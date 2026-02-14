@@ -2,7 +2,7 @@ import re
 import sys
 import time
 
-# enn v1.0
+# enn v1.0.1
 # made by las-r on github, mit license
 
 # helper functions
@@ -18,7 +18,8 @@ if len(sys.argv) > 2: wait = float(sys.argv[2])
 else: wait = 0
 
 # parse file
-pname = sys.argv[1]
+if sys.argv[1].endswith(".enn"): pname = sys.argv[1]
+else: pname = sys.argv[1] + ".enn"
 with open(pname) as pfile: prog = pfile.read()
 prog = re.sub(r'\/.*?\/', '', prog)
 prog = prog.replace("\n", "").replace(" ", "")
