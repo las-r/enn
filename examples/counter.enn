@@ -1,0 +1,29 @@
+/ Output MSB to LSB /
+>q2;
+>q1;
+>q0;
+>;
+
+/ Initialize variables to 0 /
+q0=;
+q1=;
+q2=;
+
+/ Calculate Carry for q2 /
+c2 = q0,q1;
+c2;
+
+/ Toggle q2 based on c2 (q2 = q2 XOR c2) /
+t2 = q2,c2;
+la = q2,t2;
+lb = c2,t2;
+q2 = la,lb;
+
+/ Toggle q1 based on q0 (q1 = q1 XOR q0) /
+t1 = q1,q0;
+lc = q1,t1;
+ld = q0,t1;
+q1 = lc,ld;
+
+/ Always toggle the LSB /
+q0;
