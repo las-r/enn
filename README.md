@@ -12,9 +12,9 @@ The only computation given to you is the ability to use NAND.
 **IMPORTANT NOTE:** Every program loops. To end a program, you must forcequit it.
 
 ## Usage
-**REQUIREMENTS:** Python v3.x
+**REQUIREMENTS:** Python v3.x + [keyboard](https://pypi.org/project/keyboard/)
 
-Simply place `enn.py` in the same directory as your program and run it using `enn.py PROGRAM[.enn] [CYCLE WAIT TIME]`.
+Simply place `enn.py` in the same directory as your program and run it using `enn.py PROGRAM.enn [CYCLE WAIT TIME]`.
 
 ## Syntax
 ### Basic Guidelines
