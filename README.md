@@ -2,7 +2,7 @@
 A logic-oriented esolang.
 
 ## How Enn works
-Every instruction in Enn does 1 of 2 things:
+Every instruction in Enn does 1 of 3 things:
 - Set a variable
 - Output a variable
 - Check input
