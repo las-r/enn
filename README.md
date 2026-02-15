@@ -4,7 +4,8 @@ A logic-oriented esolang.
 ## How Enn works
 Every instruction in Enn does 1 of 2 things:
 - Set a variable
-- Output that variable
+- Output a variable
+- Check input
 
 The only computation given to you is the ability to use NAND.
 
@@ -45,6 +46,15 @@ q=w,0;
 An output symbol with no variable is a newline.
 ```
 >;
+```
+#### Input a value
+`k` is set to whether the spacebar is actively being pressed or not.
+```
+<k;
+```
+An input symbol with no variable pauses the program until the spacebar is pressed.
+```
+<;
 ```
 
 That's it, really.
