@@ -5,7 +5,7 @@ A logic-oriented esolang.
 Every instruction in Enn does 1 of 3 things:
 - Set a variable
 - Output a variable
-- Check input
+- Check for input
 
 The only computation given to you is the ability to use NAND.
 
