@@ -47,7 +47,7 @@ An output symbol with no variable is a newline.
 ```
 >;
 ```
-#### Input a value
+#### Input a value (v≥1.1)
 `k` is set to whether the spacebar is actively being pressed or not.
 ```
 <k;
