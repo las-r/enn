@@ -3,7 +3,7 @@ import re
 import sys
 import time
 
-# enn v1.1
+# enn v1.1.1
 # made by las-r on github, mit license
 
 # helper functions
@@ -55,7 +55,7 @@ try:
                     var[p[1:]] = int(keyboard.is_pressed("space")) #type: ignore
                     anykey = False
                 else:
-                    while not anykey:
+                    while not keyboard.is_pressed("space"):
                         time.sleep(0.01)
                     anykey = False
                 
