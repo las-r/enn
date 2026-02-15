@@ -3,7 +3,7 @@ import re
 import sys
 import time
 
-# enn v1.1.1
+# enn v1.1.2
 # made by las-r on github, mit license
 
 # helper functions
@@ -31,7 +31,7 @@ prog = prog.replace("\n", "").replace(" ", "")
 prog = [p for p in prog.split(";") if p]
 
 # program loop
-var = {0: 0, 1: 1}
+var = {"0": 0, "1": 1}
 try:
     while True:
         for i, p in enumerate(prog):
