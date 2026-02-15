@@ -39,7 +39,7 @@ You can also use direct values.
 q=w,0;
 ```
 #### Output a value
-`q` is outputed to the console. Variable outputs are inline.
+`q` is outputted to the console. Variable outputs are inline.
 ```
 >q;
 ```
