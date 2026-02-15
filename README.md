@@ -16,10 +16,11 @@ The only computation given to you is the ability to use NAND.
 Simply place `enn.py` in the same directory as your program and run it using `enn.py PROGRAM[.enn] [CYCLE WAIT TIME]`.
 
 ## Syntax
-### Basic Rules
-- Every instruction should be ended with ";".
+### Basic Guidelines
+- Every instruction should be ended with `;`.
 - Spaces, lines, and indentation does not matter.
-- Comments are padded with "/".
+- Variable names can use any character besides `=`, `>`, and `;`.
+- Comments are padded with `/`.
 
 ### Commands
 #### Create a variable
