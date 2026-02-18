@@ -3,7 +3,7 @@ import keyboard
 import re
 import time
 
-# enn v1.2
+# enn v1.2.1
 # made by las-r on github, mit license
 
 # helper functions
@@ -21,7 +21,7 @@ def checkName(v):
 # argument parsing
 parser = argparse.ArgumentParser(
     prog="enn",
-    description="Enn v1.2 - NAND-based esolang interpreter"
+    description="Enn v1.2 - A logic-oriented esolang."
 )
 parser.add_argument("filename", help="Program file to run")
 parser.add_argument(
