@@ -9,12 +9,48 @@ Every instruction in Enn does 1 of 3 things:
 
 The only computation given to you is the ability to use NAND.
 
-**IMPORTANT NOTE:** Every program loops. To end a program, you must forcequit it.
+**IMPORTANT NOTE:** Every program loops by default. To end a program, you must forcequit it, or use the `--once` argument.
 
 ## Usage
-**REQUIREMENTS:** Python v3.x + [keyboard](https://pypi.org/project/keyboard/)
+**REQUIREMENTS:** Python v3.x + [keyboard](https://pypi.org/project/keyboard/) + [argparse](https://pypi.org/project/argparse/)
 
-Simply place `enn.py` in the same directory as your program and run it using `enn.py PROGRAM.enn [CYCLE WAIT TIME]`.
+```
+python enn.py program [options]
+```
+
+If `.enn` is not included, it will be appended automatically.
+
+### Options
+**`-w <seconds>`, `--wait <seconds>`**\
+Delay between execution cycles.\
+Default: `0`
+```
+python enn.py program -w 0.1
+```
+
+**`-o`, `--once`**\
+Run the program once instead of looping forever.
+```
+python enn.py program --once
+```
+
+**`-d`, `--debug`**\
+Print variable state after each execution cycle.
+```
+python enn.py program -d
+```
+
+**`-ne`, `--no-ext`**\
+Do not automatically append `.enn` to the filename.
+```
+python enn.py program.txt --no-ext
+```
+
+**`-v`, `--version`**\
+Display interpreter version.
+```
+python enn.py --version
+```
 
 ## Syntax
 ### Basic Guidelines
@@ -24,13 +60,12 @@ Simply place `enn.py` in the same directory as your program and run it using `en
 - Comments are padded with `/`.
 
 ### Commands
-#### Create a variable
+#### Set a variable
 `q` is the name of the variable.
 ```
 q=;
 ```
-#### Use a NAND gate
-Variable `q` is set to `w` NAND `e`.
+Variable `q` is set to `w` NAND `e`. This is the only logic you can use.
 ```
 q=w,e;
 ```
@@ -47,7 +82,11 @@ An output symbol with no variable is a newline.
 ```
 >;
 ```
-#### Input a value (v≥1.1)
+Two output symbols is an ASCII/UTF-8 output. _(v≥1.2)_
+```
+>>q,w,e,r,t,y,u,i,o,p;
+```
+#### Input a value _(v≥1.1)_
 `k` is set to whether the spacebar is actively being pressed or not.
 ```
 <k;
