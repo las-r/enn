@@ -3,7 +3,7 @@ import keyboard
 import re
 import time
 
-# enn v1.2.1
+# enn v1.2.2
 # made by las-r on github, mit license
 
 # helper functions
@@ -13,7 +13,7 @@ def getVar(v):
     else: 
         return 0
 def checkName(v):
-    if v.includes("=") or v.includes(" "):
+    if any(c in v for c in ["=", ";", " ", "<", ">"]) or v in ["0", "1"]:
         return
     else:
         return v
@@ -104,7 +104,8 @@ try:
                     while not keyboard.is_pressed("space"):
                         time.sleep(0.01)
                     anykey = False
-                
+            
+            # toggle
             else:
                 if p in var:
                     var[p] = 1 - getVar(p)
