@@ -2,9 +2,7 @@
 / Made by las-r on GitHub /
 
 / Output MSB to LSB /
->q2;
->q1;
->q0;
+>q2;>q1;>q0;
 >;
 
 / Initialize variables to 0 /
