@@ -2,7 +2,7 @@
 A logic-oriented esolang.
 
 ## How Enn works
-Every instruction in Enn does 1 of 3 things:
+Every instruction in Enn does 1 of 4 things:
 - Set a variable
 - Output a variable
 - Toggle a variable
@@ -55,10 +55,11 @@ python enn.py --version
 
 ## Syntax
 ### Basic Guidelines
+- Line breaks, indentation, and trailing spaces do not matter.
 - Every instruction should be ended with `;`.
-- Spaces, lines, and indentation does not matter.
-- Variable names can use any character besides `=`, `>`, and `;`.
 - Comments are padded with `/`.
+- Variable names cannot include spaces or use the following characters: `=, l, <, >`
+  - Variable names also cannot be `0` or `1`
 
 ### Commands
 #### Set a variable
