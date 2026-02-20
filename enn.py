@@ -3,7 +3,7 @@ import keyboard
 import re
 import time
 
-# enn v1.2.2
+# enn v1.2.3
 # made by las-r on github, mit license
 
 # helper functions
@@ -46,6 +46,11 @@ parser.add_argument(
     help="Do not automatically append .enn"
 )
 parser.add_argument(
+    "-m", "--minify",
+    action="store_true",
+    help="Create a minified version of the program"
+)
+parser.add_argument(
     "-v", "--version",
     action="version",
     version="Enn v1.2"
@@ -62,14 +67,23 @@ with open(pname) as pfile:
     prog = pfile.read()
 prog = re.sub(r'\/.*?\/', '', prog)
 prog = prog.replace("\n", "").replace(" ", "")
-prog = [p for p in prog.split(";") if p]
+lprog = [p for p in prog.split(";") if p]
+
+# minify
+if args.minify:
+    si = pname.rfind(".")
+    mna = pname[:si]
+    ext = pname[si:]
+    mname = mna + ".min" + ext
+    with open(mname, "x") as mfile:
+        mfile.write(prog)
 
 # program loop
 var = {"0": 0, "1": 1}
 try:
     running = True
     while running:
-        for i, p in enumerate(prog):
+        for i, p in enumerate(lprog):
             # variable set
             if p[-1] == "=":
                 if p[:-1] not in var: 
