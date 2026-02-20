@@ -21,7 +21,7 @@ python enn.py program [options]
 
 If `.enn` is not included, it will be appended automatically.
 
-### Options _(v≥1.2)_
+### Arguments _(v≥1.2)_
 **`-w <seconds>`, `--wait <seconds>`**\
 Delay between execution cycles.\
 Default: `0`
