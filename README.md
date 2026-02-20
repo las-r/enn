@@ -9,6 +9,7 @@ A logic-oriented esolang.
   - [Basic Guidelines](#basic-guidelines)
   - [Commands](#commands)
     - [Set a variable](#set-a-variable)
+    - [Toggle a variable](#toggle-a-variable)
     - [Output a value](#output-a-value)
     - [Input a value (v≥1.1)](#input-a-value-v11)
 
@@ -92,7 +93,7 @@ You can also use direct values.
 ```
 q=w,0;
 ```
-#### Set a variable
+#### Toggle a variable
 `q` is toggled between `0` and `1`.
 ```
 q;
