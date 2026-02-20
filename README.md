@@ -38,7 +38,7 @@ python enn.py program --once
 **`-d`, `--debug`**\
 Print variable state after each execution cycle.
 ```
-python enn.py program -debug
+python enn.py program --debug
 ```
 
 **`-ne`, `--no-ext`**\
