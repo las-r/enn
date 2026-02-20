@@ -21,7 +21,7 @@ python enn.py program [options]
 
 If `.enn` is not included, it will be appended automatically.
 
-### Options
+### Options _(v≥1.2)_
 **`-w <seconds>`, `--wait <seconds>`**\
 Delay between execution cycles.\
 Default: `0`
@@ -38,13 +38,19 @@ python enn.py program --once
 **`-d`, `--debug`**\
 Print variable state after each execution cycle.
 ```
-python enn.py program -d
+python enn.py program -debug
 ```
 
 **`-ne`, `--no-ext`**\
 Do not automatically append `.enn` to the filename.
 ```
 python enn.py program.txt --no-ext
+```
+
+**`-m`, `--minify` _(v≥1.2.3)_**\
+Create a minified version of the program as `program.min.enn`
+```
+python enn.py program.enn --minify
 ```
 
 **`-v`, `--version`**\
