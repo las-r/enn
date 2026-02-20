@@ -92,6 +92,11 @@ You can also use direct values.
 ```
 q=w,0;
 ```
+#### Set a variable
+`q` is toggled between `0` and `1`.
+```
+q;
+```
 #### Output a value
 `q` is outputted to the console. Variable outputs are inline.
 ```
