@@ -1,6 +1,17 @@
 # Enn: Executable NAND Network
 A logic-oriented esolang.
 
+## Table of Contents
+- [How Enn works](#how-enn-works)
+- [Usage](#usage)
+  - [Arguments (v≥1.2)](#arguments-v12)
+- [Syntax](#syntax)
+  - [Basic Guidelines](#basic-guidelines)
+  - [Commands](#commands)
+    - [Set a variable](#set-a-variable)
+    - [Output a value](#output-a-value)
+    - [Input a value (v≥1.1)](#input-a-value-v11)
+
 ## How Enn works
 Every instruction in Enn does 1 of 4 things:
 - Set a variable
