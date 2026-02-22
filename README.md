@@ -119,14 +119,14 @@ Enn can be defined as a Bounded Storage Machine (BSM).
 ### Proof
 To categorize Enn as a Bounded Storage Machine, we must show that its computational power and memory constraints align with the formal definition of a BSM: _a system with a finite, fixed number of bits and a transition function that maps current states to future states_.
 
-#### 1. Memory Constraints
+#### Memory Constraints
 An Enn program's memory is defined by the variable defined in it's source code. Because variables cannot be dynamically created and/or remove during runtime, the total amount of bits (n) the memory has is determined at the program's creation.
 
-#### 2. Transition Function
+#### Transition Function
 Enn directly implements the NAND operation, and the toggle command is effectively a NOT operation. Because programs loop by default, variables can act as latches, allowing the program to maintain a "state" over time.
 
-#### 3. Functional Completeness
+#### Functional Completeness
 Enn uses the NAND gate as its primary function. In digital logic, NAND is universal, meaning it can be used to reconstruct any other logic. Any boolean function can be constructed using only NAND gates, making Enn capable of representing any digital asynchronous circuit that fits in n bits.
 
-#### 4. Comparison to Turing Machines
+#### Comparison to Turing Machines
 Enn's memory is bounded, placing it in the same complexity class as a Finite State Automaton (FSA). Turing Machines require an infinite memory (tape), which Enn is incapable of producing.
