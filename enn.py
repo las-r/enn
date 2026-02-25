@@ -3,7 +3,7 @@ import keyboard
 import re
 import time
 
-# enn v1.2.3
+# enn v1.2.4
 # made by las-r on github, mit license
 
 # helper functions
@@ -97,10 +97,13 @@ try:
         
             # output
             elif p.startswith(">>"):
-                c = "".join(p[2:].split(","))
-                if len(c) == 8:
-                    b = int(c, 2)
-                    d = b.to_bytes(len(c) // 8, "big").decode("utf-8")
+                c = p[2:].split(",")
+                x = ""
+                for bit in c:
+                    x += str(getVar(bit))
+                if len(x) == 8:
+                    b = int(x, 2)
+                    d = b.to_bytes(len(x) // 8, "big").decode("utf-8")
                     print(d, end="", flush=True)
                     
             elif p[0] == ">":
