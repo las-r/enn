@@ -130,3 +130,22 @@ Enn uses the NAND gate as its primary function. In digital logic, NAND is univer
 
 #### Comparison to Turing Machines
 Enn's memory is bounded, placing it in the same complexity class as a Finite State Automaton (FSA). Turing Machines require an infinite memory (tape), which Enn is incapable of producing.
+
+## Variants
+### Menn: Minimal Executable NAND Network
+Menn is, at its core, a stripped-down variant of Enn. It's closer to the original vision for Enn, being a bare-bones logic-based language with no QOL features.
+
+#### Comparison
+|Feature                    |Enn (v1.2.4)                     |Menn (v1.0.0)             |
+|---------------------------|---------------------------------|--------------------------|
+|**Core Logic**             |NAND gate (x=a,b)                |NAND gate (x=a,b)         |
+|**Variable Initialization**|Supported (var=)                 |Supported (var=)          |
+|**Binary Output**          |>var (digit) / > (newline)       |>var (digit) / > (newline)|
+|**ASCII Output**           |>>a,b,c,d,e,f,g,h                |Not Supported             |
+|**User Input**             |< (Wait for Space) / <var        |Not Supported             |
+|**Bit Toggling**           |var (Flips 0 to 1 and vice versa)|Not Supported             |
+|**Execution Loop**         |Infinite (default) or Once (-o)  |Infinite only             |
+|**Timing/Delays**          |-w flag (seconds)                |Not Supported (Full speed)|
+|**File Handling**          |Auto-appends .enn                |Manual filename only      |
+|**Minification**           |Built-in -m flag                 |Not Supported             |
+|**Debugging**              |Built-in -d flag                 |Not Supported             |
