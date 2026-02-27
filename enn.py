@@ -3,7 +3,7 @@ import keyboard
 import re
 import time
 
-# enn v1.2.5
+# enn v1.2.6
 # made by las-r on github, mit license
 
 # helper functions
@@ -116,11 +116,9 @@ try:
             elif p[0] == "<":
                 if p[1:]:
                     var[p[1:]] = int(keyboard.is_pressed("space"))
-                    anykey = False
                 else:
                     while not keyboard.is_pressed("space"):
                         time.sleep(0.01)
-                    anykey = False
             
             # toggle
             else:
