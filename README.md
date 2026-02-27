@@ -132,7 +132,7 @@ Enn uses the NAND gate as its primary function. In digital logic, NAND is univer
 Enn's memory is bounded, placing it in the same complexity class as a Finite State Automaton (FSA). Turing Machines require an infinite memory (tape), which Enn is incapable of producing.
 
 ## Variants
-### Menn: Minimal Executable NAND Network
+### [Menn: Minimal Executable NAND Network](https://esolangs.org/wiki/Menn)
 Menn is, at its core, a stripped-down variant of Enn. It's closer to the original vision for Enn, being a bare-bones logic-based language with no QOL features.
 
 #### Comparison
