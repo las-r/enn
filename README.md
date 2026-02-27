@@ -136,7 +136,7 @@ Enn's memory is bounded, placing it in the same complexity class as a Finite Sta
 Menn is, at its core, a stripped-down variant of Enn. It's closer to the original vision for Enn, being a bare-bones logic-based language with no QOL features.
 
 #### Comparison
-|Feature                    |Enn (v1.2.4)                     |Menn (v1.0.0)             |
+|Feature                    |Enn                              |Menn                      |
 |---------------------------|---------------------------------|--------------------------|
 |**Core Logic**             |NAND gate (x=a,b)                |NAND gate (x=a,b)         |
 |**Variable Initialization**|Supported (var=)                 |Supported (var=)          |
