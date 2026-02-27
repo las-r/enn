@@ -3,7 +3,7 @@ import keyboard
 import re
 import time
 
-# enn v1.2.4
+# enn v1.2.5
 # made by las-r on github, mit license
 
 # helper functions
@@ -21,7 +21,7 @@ def checkName(v):
 # argument parsing
 parser = argparse.ArgumentParser(
     prog="enn",
-    description="Enn v1.2 - A logic-oriented esolang."
+    description="Enn v1.2.5 - A logic-oriented esolang."
 )
 parser.add_argument("filename", help="Program file to run")
 parser.add_argument(
@@ -53,7 +53,7 @@ parser.add_argument(
 parser.add_argument(
     "-v", "--version",
     action="version",
-    version="Enn v1.2"
+    version="Enn v1.2.5"
 )
 args = parser.parse_args()
 wait = args.wait
@@ -115,7 +115,7 @@ try:
             # input        
             elif p[0] == "<":
                 if p[1:]:
-                    var[p[1:]] = int(keyboard.is_pressed("space")) #type: ignore
+                    var[p[1:]] = int(keyboard.is_pressed("space"))
                     anykey = False
                 else:
                     while not keyboard.is_pressed("space"):
