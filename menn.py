@@ -2,7 +2,7 @@ import argparse
 import keyboard
 import re
 
-# menn v1.0.0
+# menn v1.0.1
 # forked from enn v1.2.4
 # made by las-r on github, mit license
 
@@ -21,7 +21,7 @@ def checkName(v):
 # argument parsing
 parser = argparse.ArgumentParser(
     prog="menn",
-    description="Menn v1.0 - A minimal logic-oriented esolang."
+    description="Menn v1.0.1 - A minimal logic-oriented esolang."
 )
 parser.add_argument("filename", help="Program file to run")
 args = parser.parse_args()
