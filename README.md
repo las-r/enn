@@ -149,3 +149,23 @@ Menn is, at its core, a stripped-down variant of Enn. It's closer to the origina
 |**File Handling**          |Auto-appends .enn                |Manual filename only      |
 |**Minification**           |Built-in -m flag                 |Not Supported             |
 |**Debugging**              |Built-in -d flag                 |Not Supported             |
+
+### [Senn: Stack-based Executable NAND Network](https://esolangs.org/wiki/Senn)
+Senn is a modification of Enn that uses an infinite stack-tape insteadf of named variables. Hypothetically, it's more powerful than Enn as it is not bounded by memory.
+
+#### Comparison
+|Feature                    |Enn                                |Senn                                       |
+|---------------------------|-----------------------------------|-------------------------------------------|
+|**Storage Model**          |Named Variables (Dictionary-based) |Infinite Tape (defaultdict) with 3 Pointers|
+|**Core Logic**             |NAND gate x=a,b                    |NAND gate p1 p2 p3 (uses pointer values)   |
+|**Pointer Control**        |Not Supported                      |Supported (,, ., ? moved via + and -)      |
+|**Variable Initialization**|Supported (var=)                   |Not supported                              |
+|**Binary Output**          |>var (digit) / > (newline)         |>p (digit at pointer) / > (newline)        |
+|**ASCII Output**           |>>a,b,c,d,e,f,g,h (8 specific vars)|>>p (8 bits starting from pointer address) |
+|**User Input**             |< (Wait) / <var (Read space key)   |< (Wait) / <p (Read space into pointer)    |
+|**Bit Toggling**           |var (Flips specific variable)      |p (Flips bit at pointer address)           |
+|**Execution Loop**         |Infinite (default) or Once (-o)    |Infinite (default) or Once (-o)            |
+|**Timing/Delays**          |-w flag (seconds)                  |-w flag (seconds)                          |
+|**File Handling**          |Auto-appends .enn                  |Auto-appends .snn                          |
+|**Minification**           |Built-in -m flag                   |Not Supported                              |
+|**Debugging**              |-d (Prints variable dictionary)    |-d (Prints Pointers and active Tape state) |
