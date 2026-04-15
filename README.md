@@ -99,7 +99,7 @@ An output symbol with no variable is a newline.
 ```
 Two output symbols is an ASCII/UTF-8 output. _(v≥1.2)_
 ```
->>q,w,e,r,t,y,u,i,o,p;
+>>q,w,e,r,t,y,u,i;
 ```
 #### Input a value _(v≥1.1)_
 Inputs can only pull from the spacebar.
